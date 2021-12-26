@@ -10,11 +10,11 @@ const forecast = (a, b, callback) => {
       callback("Unable to locate the location.", undefined);
     } else {
       const data = body.current.weather_descriptions +
-        ". It is " +
+        '. It is ' +
         body.current.temperature +
-        " degress. It feels like " +
+        ' degress out. It feels like ' +
         body.current.feelslike +
-        " degrees.";
+        ' degrees out. The humidity is ' + body.current.humidity + '%.';
       callback(undefined, data);
     }
   });
